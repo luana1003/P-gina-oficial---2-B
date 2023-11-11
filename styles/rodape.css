@@ -1,0 +1,31 @@
+/*Layout mobile*/
+
+/*Estilização do footer*/
+.rodape {
+  height: 15vh;
+  background-color: var(--rosa-choque);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/*Logo do site no footer*/
+.rodape__logo {
+  border-radius: 10rem;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.rodape__hit__segundo__b {
+  width: 80%;
+}
+
+/*RESPONSIVIDADE*/
+/*Tablet (vale também para o desktop*/
+@media screen and (min-width: 800px) {
+  .rodape__hit__segundo__b {
+    font-size: 1.5rem;
+  }
+}

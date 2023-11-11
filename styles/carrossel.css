@@ -1,0 +1,73 @@
+/*Layout mobile (vale também para o tablet*/
+
+/*Container com o SwiperJS (carrossel de imagens do interclasse)*/
+.swiper {
+    width: 100%;
+    padding-top: 3.125rem;
+}
+
+/*Slides do SwiperJS*/
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 16rem;
+    height: 300px;
+}
+
+/*Imagens dos slides do SwiperJS*/
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*Quando um slide é passado no SwiperJS, a cor do seu marcador fica rosa choque*/
+.swiper-pagination-bullet-active{
+    background: var(--rosa-choque);
+}
+
+/*Borda do marcador das imagens do SwiperJS (branca)*/
+.swiper-pagination-bullet{
+    border: 1px solid var(--branco);
+}
+
+/*Carrossel com os campeões de cada modalidade e do campeão geral (BOOTSTRAP)*/
+.carrossel{
+    width: 80%;
+}
+
+/*Container com o título e a legenda do carrossel dos campeões de cada modalidade e do campeão geral (BOOTSTRAP)*/
+.carousel-caption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Legenda e titulo do carrossel com os campeões de cada modalidade e do campeão geral (BOOTSTRAP)*/
+.legenda__carrossel, .titulo__carrossel{
+    font-size: 1.5rem;
+    color: var(--rosa-texto-titulo);
+    background-color: var(--preto);
+    width: 10%;
+    text-align: center;
+    border-radius: 5rem;
+}
+
+/*Título do carrossel com os campeões de cada modalidade e do campeão geral (BOOTSTRAP)*/
+.titulo__carrossel{
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+/*Legenda do carrossel com os campeões de cada modalidade e do campeão geral (BOOTSTRAP)*/
+.legenda__carrossel{
+    width: 70%;
+}
+
+/*RESPONSIVIDADE*/
+/*Desktop*/
+@media screen and (min-width: 1220px){
+  .carrossel{
+    width: 45%;
+  }
+}

@@ -1,0 +1,282 @@
+/*Design da seção "Bem vindo(a) à página oficial do 2º B!"*/
+.secao__principal {
+  background-image: url("../assets/foto__2ºB.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Título da seção "Bem vindo(a) à página oficial do 2º B!"*/
+.secao__principal__titulo {
+  font-family: var(--fonte-titulo);
+  width: 80%;
+  font-size: 3rem;
+  margin: 0 0 2rem 0;
+  visibility: hidden;
+}
+
+/*Link "Saiba mais" da seção "Bem vindo(a) à página oficial do 2º B!"*/
+.secao__principal__link__saiba__mais {
+  font-family: var(--fonte-texto);
+  text-decoration: none;
+  background-color: var(--rosa-salmao);
+  color: var(--branco);
+  font-size: 2rem;
+  padding: .3rem;
+  border-radius: 1.5rem;
+}
+
+.secao__principal__link__saiba__mais:hover {
+  color: var(--rosa-texto-titulo);
+}
+
+/*Seções abaixo da principal*/
+.secao__secundaria {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--rosa-texto-titulo);
+  transition: 1s;
+
+}
+
+/*Título das seções abaixo da principal*/
+.secao__secundaria__titulo {
+  font-size: 3rem;
+  margin: 1rem 0 1rem 0;
+  font-family: var(--fonte-titulo);
+}
+
+/*Parágrafos das seções com textos maiores abaixo da principal*/
+.secao__secundaria__descricao {
+  margin: 1rem;
+}
+
+/*Imagem presente nas seções secundárias*/
+.secao__secundaria__imagem {
+  width: 20rem;
+  height: 16.5rem;
+}
+
+/*Estilização própria da seção "Modalidades do interclasse"*/
+.modalidades {
+  height: auto;
+}
+
+/*Cards com cada imagem, nome e descrição das modalidades do interclasse (INDIVIDUALMENTE) --> BOOTSTRAP*/
+.secao__secundaria__modalidades__individual {
+  border: 1px solid var(--rosa-texto-titulo);
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+.secao__secundaria__modalidades__individual:hover {
+   transform: translateX(10px) scale(1.3);
+}
+
+/*Imagens das modalidades do interclasse*/
+.secao__secundaria__modalidades__individual__imagem {
+  margin: 1.5rem 0 0 0;
+}
+
+/*Legendas das seções secundárias (ex.: "TIME DE FUTSAL FEMININO 2º B (2023))*/
+.secao__secundaria__legenda {
+  font-size: 1.5rem;
+}
+
+/*Container com o vídeo e a imagem do time feminino de futsal do 2º B*/
+.secao__secundaria__campeas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/*Estilização da imagem do time feminino de futsal do 2º B*/
+.imagem__campeas {
+  width: 18rem;
+  height: 13rem;
+}
+
+/*Background de fogo de cada seção secundária da página (mobile)*/
+.fogo {
+  background: url("../assets/fogo__2ºB.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vh 100vw;
+}
+
+/*Tamanho da seção "Entrevistas"*/
+.entrevistas {
+  height: auto;
+}
+
+
+/*RESPONSIVIDADE*/
+/*Tablet*/
+@media screen and (min-width:500px){
+  .modalidades{
+    background-image: url("../assets/fundo-modalidades.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #campeas{
+    background-image: url("../assets/campeas-fundo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .hit{
+    background-image: url("../assets/fundo__hit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width:800px) {
+  .secao__principal__titulo {
+    font-size: 5rem;
+  }
+
+  .fogo {
+    background: none;
+  }
+
+  .secao__secundaria {
+    height: 100vh;
+  }
+
+  .secao__secundaria__container {
+    flex-direction: column;
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+    width: 40%;
+  }
+
+  .secao__titulo__texto__direita {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .interclasse {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .secao__secundaria__titulo {
+    font-size: 4rem;
+  }
+
+  .secao__secundaria__descricao {
+    width: 100%;
+  }
+
+  .secao__secundaria__imagem {
+    width: 26rem;
+    height: 19rem;
+  }
+
+  .titulo__esquerda {
+    text-align: left;
+  }
+
+  .texto__esquerda {
+    text-align: left;
+    margin: 0;
+  }
+
+  .secao__secundaria__modalidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .secao__secundaria__modalidades__individual {
+    width: 10rem;
+    height: auto;
+  }
+
+  .secao__secundaria__modalidades__individual:hover {
+    background-color: var(--cinza-escuro);
+  }
+
+  .secao__secundaria__modalidades__individual__imagem {
+    border-radius: 10rem;
+  }
+
+  .secao__secundaria__campeas {
+    flex-direction: row;
+  }
+  
+  .secao__secundaria__campeas__video {
+    width: 26rem;
+    height: 19rem;
+  }
+  
+  .secao__secundaria__hit {
+    height: 35rem;
+  }
+  .entrevistas {
+    height: auto;
+  }
+
+  .secao__secundaria__entrevistas__container__item__linha {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .modalidades {
+    height: 100vh;
+    display: flex-start;
+    background-image: url("../assets/fundo-modalidades.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hit{
+    background-image: url("../assets/fundo__hit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+
+/*Desktop*/
+@media screen and (min-width: 1200px) {
+  .secao__secundaria {
+    height: 100vh;
+  }
+
+  .secao__secundaria__descricao {
+    font-size: 1.5rem;
+  }
+  
+}

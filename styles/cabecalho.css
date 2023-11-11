@@ -1,0 +1,203 @@
+/*Layout mobile*/
+
+/*Classe do header*/
+.cabecalho {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+/*Container com todos os itens do header*/
+.cabecalho__container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Menu hambúrguer do site (mobile e tablet)*/
+.cabecalho__container .cabecalho__menu__hamburguer {
+  position: absolute;
+  z-index: 1000;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/*Container das linhas do menu hambúrguer*/
+.cabecalho__container .cabecalho__menu__hamburguer__linhas {
+  position: absolute;
+  z-index: 999;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  margin: 0 0 0 1rem;
+}
+
+/*Linhas do menu hambúrguer (individualmente)*/
+.cabecalho__container .cabecalho__menu__hamburguer__linhas span {
+  display: block;
+  width: 2.1875rem;
+  height: 0.3125rem;
+  margin-bottom: 0.625rem;
+  background-color: var(--rosa-choque);
+  border-radius: 0.625rem;
+  transition: all ease .2s;
+}
+
+/*Se o menu hambúrguer for clicado, suas linhas passarão de rosa a branco*/
+.cabecalho__container .cabecalho__menu__hamburguer:checked~.cabecalho__menu__hamburguer__linhas span {
+  background-color: var(--branco);
+}
+
+/*Se o menu hambúrguer for clicado, cada linha do menu hambúrguer sofrerá uma animação para formar um "X"*/
+.cabecalho__container .cabecalho__menu__hamburguer:checked~.cabecalho__menu__hamburguer__linhas span:nth-child(1) {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg) scaleX(1.25);
+}
+
+/*Se o menu hambúrguer for clicado, cada linha do menu hambúrguer sofrerá uma animação para formar um "X"*/
+.cabecalho__container .cabecalho__menu__hamburguer:checked~.cabecalho__menu__hamburguer__linhas span:nth-child(2) {
+  opacity: 0;
+}
+
+/*Se o menu hambúrguer for clicado, cada linha do menu hambúrguer sofrerá uma animação para formar um "X"*/
+.cabecalho__container .cabecalho__menu__hamburguer:checked~.cabecalho__menu__hamburguer__linhas span:nth-child(3) {
+  transform-origin: 0% 100%;
+  transform: rotate(-45deg) scaleX(1.25);
+}
+
+/*Se o menu hambúrguer for clicado, os itens da lista referente a ele aparecerão*/
+.cabecalho__container .cabecalho__menu__hamburguer:checked~.cabecalho__menu__hamburguer__lista {
+  margin-left: 0;
+  display: block;
+}
+
+/*Lista dos itens que aparecem após o clique no menu hambúrguer*/
+.cabecalho__menu__hamburguer__lista {
+  display: none;
+  position: absolute;
+  z-index: 998;
+  left: 0;
+  width: 60vw;
+  top: 0;
+  height: 100vh;
+  background-color: var(--rosa-choque);
+  color: var(--branco);
+  padding-top: 100px;
+  margin: 0;
+}
+
+/*Item da lista que aparece após o clique no menu hambúrguer*/
+.cabecalho__menu__hamburguer__lista__item {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0 0 1rem 0;
+}
+
+/*Link dos itens que aparecem no menu hambúrguer*/
+.cabecalho__menu__hamburguer__lista__item__link {
+  text-decoration: none;
+  color: var(--branco);
+  font-size: 1.5rem;
+}
+
+/*Caso o cursor passe em cima dos links da lista do menu hambúrguer, sua cor mudará para um rosa claro*/
+.cabecalho__menu__hamburguer__lista__item__link:hover {
+  color: var(--rosa-texto-titulo);
+}
+
+/*Container com o logo e "2º B*/
+.cabecalho__container__nome__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .5rem 0 0;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/*Logo do site no cabeçalho*/
+.cabecalho__container__logo {
+  width: 7rem;
+  height: 7rem;
+}
+
+/*Nome do site no cabeçalho*/
+.cabecalho__container__nome__site {
+  font-family: var(--fonte-titulo);
+  color: var(--rosa-choque);
+}
+
+.navbar {
+  display: none;
+}
+
+
+
+
+/*RESPONSIVIDADW*/
+/*Tablet*/
+@media screen and (min-width: 800px) {
+  .cabecalho__menu__hamburguer__lista {
+    width: 40vw;
+  }
+
+  .navbar {
+    display: none;
+  }
+}
+
+
+/*Desktop*/
+@media screen and (min-width: 1200px) {
+
+  .cabecalho {
+    flex-direction: row-reverse;
+    padding: 1rem;
+  }
+
+  .cabecalho__container .cabecalho__menu__hamburguer {
+    display: none;
+  }
+
+  .cabecalho__menu__hamburguer__linhas {
+    display: none;
+  }
+
+  .cabecalho__container__nome__logo{
+    flex-direction: row-reverse;
+  }
+  
+  .navbar {
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    color: var(--rosa-choque);
+  }
+
+  .nav-link:hover, :active {
+    color: var(--rosa-texto-titulo);
+  }
+
+  .dropdown-menu{
+    background-color: var(--rosa-choque);
+    color: var(--branco);
+  }
+
+  .dropdown-item{
+    color: var(--branco);
+    font-size: 1.3rem;
+  }
+
+  .dropdown-item:hover{
+    background-color: var(--rosa-texto-titulo);
+  }
+
+}

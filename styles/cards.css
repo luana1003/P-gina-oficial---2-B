@@ -1,0 +1,26 @@
+/*Layout mobile*/
+
+/*Container com as entrevistas*/
+.secao__secundaria__entrevistas__container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Container com as entrevistas (INDIVIDUALMENTE) --> cards (BOOTSTRAP)*/
+.secao__secundaria__entrevistas__container__item{
+    border: 1px solid var(--rosa-texto-titulo);
+    margin: 0 0 2rem 0;
+}
+
+/*Título do card*/
+.card-titulo{
+    font-size: 2rem;
+}
+
+/*RESPONSIVIDADE*/
+/*Tablet (vale também para o desktop)*/
+@media screen and (min-width: 991px){
+    .secao__secundaria__entrevistas__container__item__linha{
+        gap: 7rem;
+    }
+}
