@@ -1,0 +1,62 @@
+/*ESTILIZAÇÃO E RESPONSIVIDADE UTILIZADAS: MOBILE-FIRST*/
+
+/*Importando os CSS dos componentes do site (TODOS ESTÃO NA PASTA STYLES)*/
+@import url("./styles/cabecalho.css");
+@import url("./styles/secoes.css");
+@import url("./styles/carrossel.css");
+@import url("./styles/rodape.css");
+@import url("./styles/cards.css");
+
+
+/*Criando variáveis CSS para cores e textos*/
+:root {
+  --preto: #000000;
+  --cinza-escuro: #242427;
+  --rosa-texto-titulo: #e8d5d8;
+  --branco: #FFFFFF;
+  --rosa-choque: #da1359;
+  --rosa-salmao: #e51a38;
+  --fonte-titulo: "Sedgwick Ave";
+  --fonte-texto: "Teko";
+}
+
+/*Estilização geral do documento*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*Estilizando o corpo do site*/
+body {
+  background-color: var(--preto);
+  color: var(--branco);
+  font-family: var(--fonte-texto);
+  max-width: 100vw;
+  flex-wrap: wrap;
+}
+
+.scroll {
+  outline: none;
+  border: 0;
+  background-color: var(--rosa-choque);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s all;
+  cursor: pointer;
+  z-index: 999;
+
+}
+
+
+
+.show-button.float-button {
+  right: 20px;
+  transition: .4s all;
+}
